@@ -11,12 +11,12 @@ import java.math.BigDecimal;
 @Schema(description = "Datos para necesarios para actualizar o crear un nuevo producto")
 public record ProductoRequest(
 
-        @Schema(description = "Nombre del producto", example = "Laptop Game")
+        @Schema(description = "Nombre del producto", example = "Laptop Gamer")
         @NotBlank(message = "El nombre es requerido")
         @Size(min = 5, max = 30,message = "El nombre tiene que tener de 5 a 30 caracteres")
         String nombre,
 
-        @Schema(description = "Categoria del producto", example = "Electromico"
+        @Schema(description = "Categoria del producto", example = "Electronica"
         ,allowableValues = {
                 "ALIMENTO",
                 "HIGIENE",

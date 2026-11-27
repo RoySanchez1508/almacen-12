@@ -13,7 +13,7 @@ public class ProductoMapper {
 
         return request == null
                 ? null
-                : Producto.cear(
+                : Producto.crear(
                         request.nombre(),
                         categoria,
                         request.precio(),

@@ -51,6 +51,8 @@ public class SucursalServiceImpl implements SucursalService{
 
         Sucursal sucursal = sucursalMapper.requestAEntidad(request);
 
+        sucursalRepository.saveAndFlush(sucursal);
+
         log.info("Nueva sucursal {} registrado ", sucursal.getNombre());
 
         return sucursalMapper.entidadAResponse(sucursal);

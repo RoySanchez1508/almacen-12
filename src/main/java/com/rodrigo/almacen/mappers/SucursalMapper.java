@@ -11,7 +11,8 @@ public class SucursalMapper {
     public Sucursal requestAEntidad(SucursalRequest request){
         return request == null
                 ? null
-                : Sucursal.crear(request.nombre(), request.direccion());
+                : Sucursal.crear(request.nombre(),
+                request.direccion());
     }
 
     public SucursalResponse entidadAResponse(Sucursal sucursal){

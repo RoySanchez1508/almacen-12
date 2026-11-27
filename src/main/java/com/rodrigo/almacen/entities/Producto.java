@@ -54,7 +54,7 @@ public class Producto {
 
     public void actualizar(
             String nombre, Categoria categoria,
-            BigDecimal precio, Integer cantida){
+            BigDecimal precio, Integer cantidad){
         validarDatos(nombre,categoria,precio,cantidad);
 
         this.nombre=nombre.trim();
@@ -79,17 +79,17 @@ public class Producto {
         this.cantidad -= cantidad;
     }
 
-    public static Producto cear(
+    public static Producto crear(
             String nombre, Categoria categoria,
-            BigDecimal precio, Integer cantida){
+            BigDecimal precio, Integer cantidad){
 
-        validarDatos(nombre, categoria, precio, cantida);
+        validarDatos(nombre, categoria, precio, cantidad);
 
         return Producto.builder()
                 .nombre(nombre)
                 .categoria(categoria)
                 .precio(precio)
-                .cantidad(cantida)
+                .cantidad(cantidad)
                 .build();
     }
 
