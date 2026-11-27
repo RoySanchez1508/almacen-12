@@ -18,7 +18,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.*;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -44,13 +43,13 @@ public class ProductoController {
             @Parameter(description = "Busqueda por nombre", example = "Laptop")
             @RequestParam(required = false) String nombre,
 
-            @Parameter(description = "Busqueda por categoria", example = "Electronico")
+            @Parameter(description = "Busqueda por categoria", example = "Electronica")
             @RequestParam(required = false) String categoria,
 
             @Parameter(description = "Busqueda por precio minimo", example = "1000")
             @RequestParam(required = false) BigDecimal precioMin,
 
-            @Parameter(description = "Busqueda por precio maximon", example = "20000")
+            @Parameter(description = "Busqueda por precio maximo", example = "20000")
             @RequestParam(required = false) BigDecimal precioMax
             ){
         return ResponseEntity.ok(productoService.listar(nombre, categoria, precioMin, precioMax));

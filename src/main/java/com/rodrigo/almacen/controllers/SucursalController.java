@@ -50,8 +50,8 @@ public class SucursalController {
                     schema = @Schema(implementation = ProblemaDoc.class)))
     public ResponseEntity<SucursalResponse> obtenerPorId(
             @Parameter(description = "ID de la sucursal", example = "1")
-            @PathVariable @Positive(message = "El ID debe de ser posiivo")Long id
-    ){
+            @PathVariable @Positive(message = "El ID debe de ser posiivo")Long id)
+    {
         return ResponseEntity.ok(sucursalService.obtenerPorId(id));
     }
 

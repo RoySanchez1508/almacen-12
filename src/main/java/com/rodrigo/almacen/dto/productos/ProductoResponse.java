@@ -9,10 +9,10 @@ public record ProductoResponse(
         @Schema(description = "ID unico del producto", example = "1")
         Long id,
 
-        @Schema(description = "Nombre del producto", example = "Laptop Game")
+        @Schema(description = "Nombre del producto", example = "Laptop Gamer")
         String nombre,
 
-        @Schema(description = "Categoria del producto", example = "Electromico")
+        @Schema(description = "Categoria del producto", example = "Electronica")
         String categoria,
 
         @Schema(description = "Precio del producto", example = "15999.99")
